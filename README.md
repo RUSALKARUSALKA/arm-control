@@ -16,6 +16,9 @@ rosdep install --from-paths src --ignore-src --rosdistro humble -y
 
 colcon build
 
+moveit:https://moveit.picknik.ai/main/doc/tutorials/getting_started/getting_started.html
+
+
 2、启动arm-servos，用于与驱动代码通信，基于串口
 
 source install/local_setup.sh

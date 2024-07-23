@@ -1,33 +1,26 @@
-1、编译
+## 编译
 
-新建工程文件夹ws
-
+```
+mkdir ws
 cd ws
-
 mkdir src
-
 cd src
-
-clone code
-
-cd ../到ws路径下
-
+git clone https://github.com/fengyongronglu/arm-control
+cd ..
 rosdep install --from-paths src --ignore-src --rosdistro humble -y
-
 colcon build
+```
+moveit: https://moveit.picknik.ai/main/doc/tutorials/getting_started/getting_started.html
 
-moveit:https://moveit.picknik.ai/main/doc/tutorials/getting_started/getting_started.html
+## 启动arm-servos，用于与驱动代码通信，基于串口
 
-
-2、启动arm-servos，用于与驱动代码通信，基于串口
-
+```
 source install/local_setup.sh
-
 ros2 run arm_servos servios_serial_driver
-
-3、启动moveit demo
-
+```
+## 启动moveit demo
+```
 ros2 launch moveit2_tutorials demo.launch.py
-
+```
 
  
